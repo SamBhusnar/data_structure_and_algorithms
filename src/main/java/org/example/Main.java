@@ -10,7 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
        // Array data structure
-        ArrayDSA main = new ArrayDSA();
-        main.main();
+//        ArrayDSA main = new ArrayDSA();
+//        main.main();
+//          StackDSA.main(); // Stack data structure
+        InfixToPrefix.main(); // Infix to Prefix
     }
 }
