@@ -1,7 +1,9 @@
 package org.example;
 
-import java.util.Scanner;
+import lombok.extern.slf4j.Slf4j;
 
+import java.util.Scanner;
+@Slf4j
 public class InfixToPrefix {
     private int top;
     private int size;
@@ -11,6 +13,7 @@ public class InfixToPrefix {
         top = -1;
         this.size = size;
         this.items = new int[size];
+        log.info("Stack is initialized");
 
     }
 
