@@ -5,10 +5,11 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-       // Array data structure
+        // Array data structure
 //        ArrayDSA main = new ArrayDSA();
 //        main.main();
 //          StackDSA.main(); // Stack data structure
-        InfixToPostfix.main(); // Infix to Prefix
+//        InfixToPostfix.main(); // Infix to PostFix
+        InfixToPrefix.main(); // Infix to Prefix
     }
 }

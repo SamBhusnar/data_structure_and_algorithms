@@ -1,33 +1,33 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class ArrayDSA {
-    static int size=5;
-    static int []items=new int[size];
-    static int cnt=0;
-    public  void remove(int position){
-        if(position>=size || position<0){
+    static int size = 5;
+    static int[] items = new int[size];
+    static int cnt = 0;
+
+    public void remove(int position) {
+        if (position >= size || position < 0) {
             System.out.println("Please provide valid input");
 
-        }else if(position>=cnt){
-            System.out.println("Element not exist at "+position+" index ");
-        }else{
-            int z=items[position];
-            for (int i = position   ; i < cnt-1   ; i++) {
-                items[i]=items[i+1];
+        } else if (position >= cnt) {
+            System.out.println("Element not exist at " + position + " index ");
+        } else {
+            int z = items[position];
+            for (int i = position; i < cnt - 1; i++) {
+                items[i] = items[i + 1];
             }
-            System.out.println(z+" removed from "+position+" index");
+            System.out.println(z + " removed from " + position + " index");
             cnt--;
             traverse();
         }
     }
-    public void reverse(){
+
+    public void reverse() {
         System.out.print("[ ");
-        for (int i = cnt-1  ; i >=0 ; i--) {
-            if(i!=cnt-1){
+        for (int i = cnt - 1; i >= 0; i--) {
+            if (i != cnt - 1) {
                 System.out.print(",");
             }
             System.out.print(items[i]);
@@ -36,10 +36,10 @@ public class ArrayDSA {
         System.out.println("]");
     }
 
-    public void traverse(){
+    public void traverse() {
         System.out.print("[");
         for (int i = 0; i < cnt; i++) {
-            if(i!=0){
+            if (i != 0) {
                 System.out.print(",");
             }
             System.out.print(items[i]);
@@ -47,24 +47,26 @@ public class ArrayDSA {
         System.out.println("]");
     }
 
-    public boolean search(int element){
+    public boolean search(int element) {
         for (int i = 0; i < cnt; i++) {
-            if(items[i]==element){
+            if (items[i] == element) {
                 traverse();
-                return  true;
+                return true;
             }
         }
         traverse();
-        return  false;
+        return false;
     }
-    public void insert(int element){
-        if(cnt<size){
-            items[cnt]=element;
+
+    public void insert(int element) {
+        if (cnt < size) {
+            items[cnt] = element;
             cnt++;
-        }else{
+        } else {
             System.out.println("Operation can't be performed ! ");
         }
     }
+
     public static void main() {
         Scanner sc = new Scanner(System.in);
         while (true) {
