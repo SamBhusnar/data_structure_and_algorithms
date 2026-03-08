@@ -1,9 +1,5 @@
 package org.example;
 
-import com.sun.tools.jconsole.JConsoleContext;
-
-import java.util.Scanner;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -13,6 +9,6 @@ public class Main {
 //        ArrayDSA main = new ArrayDSA();
 //        main.main();
 //          StackDSA.main(); // Stack data structure
-        InfixToPrefix.main(); // Infix to Prefix
+        InfixToPostfix.main(); // Infix to Prefix
     }
 }

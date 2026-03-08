@@ -1,14 +1,12 @@
 package org.example;
 
-import com.sun.source.tree.LiteralTree;
-
 import java.util.Scanner;
 
-public class InfixToPrefix {
+public class InfixToPostfix {
     int top;
     int size;
     int []items;
-    public InfixToPrefix(int size){
+    public InfixToPostfix(int size){
         this.size=size;
         items=new int[size];
         top=-1;
@@ -35,7 +33,7 @@ public class InfixToPrefix {
     }
     public static void main(){
         Scanner sc = new Scanner(System.in);
-        InfixToPrefix main = new InfixToPrefix(50);
+        InfixToPostfix main = new InfixToPostfix(50);
         char []infix = new char[50];
         char []prefix = new char[50];
         int i=0,j=0;
