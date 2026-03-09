@@ -10,6 +10,7 @@ public class Main {
 //        main.main();
 //          StackDSA.main(); // Stack data structure
 //        InfixToPostfix.main(); // Infix to PostFix
-        InfixToPrefix.main(); // Infix to Prefix
+//        InfixToPrefix.main(); // Infix to Prefix
+        MatchingParenthesis.main();// matching parenthesis
     }
 }
