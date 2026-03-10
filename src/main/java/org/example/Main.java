@@ -5,13 +5,18 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-        // Array data structure
+//-----------------------------Array---------------------
 //        ArrayDSA main = new ArrayDSA();
 //        main.main();
+//------------------------------------------------------
+//        ----------------------------Stack---------------------
 //          StackDSA.main(); // Stack data structure
 //        InfixToPostfix.main(); // Infix to PostFix
 //        InfixToPrefix.main(); // Infix to Prefix
 //        MatchingParenthesis.main();// matching parenthesis
-        ExpressionEvaluation.main();// expression evalation(calclating vale)
+//        ExpressionEvaluation.main();// expression evalation(calclating vale)
+//        SubroutineCall.main();// subroutine call
+//        -------------------
+        System.out.println("Main method executed!");
     }
 }
