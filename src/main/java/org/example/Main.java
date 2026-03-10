@@ -11,6 +11,7 @@ public class Main {
 //          StackDSA.main(); // Stack data structure
 //        InfixToPostfix.main(); // Infix to PostFix
 //        InfixToPrefix.main(); // Infix to Prefix
-        MatchingParenthesis.main();// matching parenthesis
+//        MatchingParenthesis.main();// matching parenthesis
+        ExpressionEvaluation.main();// expression evalation(calclating vale)
     }
 }

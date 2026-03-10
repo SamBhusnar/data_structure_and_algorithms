@@ -3,6 +3,7 @@ package org.example;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Scanner;
+
 @Slf4j
 public class InfixToPrefix {
     private int top;
@@ -70,44 +71,44 @@ public class InfixToPrefix {
 //        System.out.println("reverse : "+infix);
 //        System.out.println(infix);
 //        System.out.println("nll char:"+infix[infix.length-1]);
-        InfixToPrefix opsStack=new InfixToPrefix(100);
-        InfixToPrefix oprndStack=new InfixToPrefix(100);
-        i=0;
-        while (infix[i]!='\0'){
-            if(infix[i]==')'||infix[i]=='+'||infix[i]=='-'||infix[i]=='*'||infix[i]=='/'){
+        InfixToPrefix opsStack = new InfixToPrefix(100);
+        InfixToPrefix oprndStack = new InfixToPrefix(100);
+        i = 0;
+        while (infix[i] != '\0') {
+            if (infix[i] == ')' || infix[i] == '+' || infix[i] == '-' || infix[i] == '*' || infix[i] == '/') {
                 opsStack.push(infix[i]);
-            }else if(infix[i]=='('){
-                while(!opsStack.isEmpty()){
-                    int r=opsStack.pop();
-                    if(r!=')'){
-                      oprndStack.push(r);
-                  }
+            } else if (infix[i] == '(') {
+                while (!opsStack.isEmpty()) {
+                    int r = opsStack.pop();
+                    if (r != ')') {
+                        oprndStack.push(r);
+                    }
 
-              }
+                }
 
-            }else {
+            } else {
                 oprndStack.push(infix[i]);
             }
             i++;
         }
-        if(!opsStack.isEmpty()){
-            int k=opsStack.pop();
-            while (k!=-1){
-                if(k!=-')'){
+        if (!opsStack.isEmpty()) {
+            int k = opsStack.pop();
+            while (k != -1) {
+                if (k != -')') {
                     oprndStack.push(k);
                 }
             }
         }
         // perform pop operation on oprndStack untill it become empty   and add popped character onto prefix string
-        String prefix="";
-        while (!oprndStack.isEmpty()){
-            int r= oprndStack.pop();
-            prefix+=(char)r;
+        String prefix = "";
+        while (!oprndStack.isEmpty()) {
+            int r = oprndStack.pop();
+            prefix += (char) r;
 
         }
-        System.out.println("Infix : "+input);
-        System.out.println("Prefix : "+prefix);
-         // testing
+        System.out.println("Infix : " + input);
+        System.out.println("Prefix : " + prefix);
+        // testing
         //        System.out.println("inp.length() : "+input.length());
         //        System.out.println(input.charAt(0)+ " : 0+last : "+input.charAt(input.length()-1));
     }

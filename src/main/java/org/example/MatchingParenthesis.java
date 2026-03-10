@@ -41,34 +41,35 @@ public class MatchingParenthesis {
             items[++top] = element;
         }
     }
-    public  static void main(){
-        Scanner sc=new Scanner(System.in);
+
+    public static void main() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter Infix expression ");
-        String input=sc.nextLine();
-        char []infix=new char[input.length()+1];
+        String input = sc.nextLine();
+        char[] infix = new char[input.length() + 1];
         MatchingParenthesis stack = new MatchingParenthesis(100);
         int i = 0;
-        for (;i < input.length(); i++) {
-            infix[i]=input.charAt(i);
+        for (; i < input.length(); i++) {
+            infix[i] = input.charAt(i);
         }
-        infix[i++]='\0';
-        i=0;
-        int t=0;
-        while (infix[i]!='\0'){
-            if(infix[i]=='('||infix[i]=='{'||infix[i]=='['){
+        infix[i++] = '\0';
+        i = 0;
+        int t = 0;
+        while (infix[i] != '\0') {
+            if (infix[i] == '(' || infix[i] == '{' || infix[i] == '[') {
                 stack.push(infix[i]);
-            }else if(infix[i]==')'||infix[i]=='}'||infix[i]==']'){
+            } else if (infix[i] == ')' || infix[i] == '}' || infix[i] == ']') {
                 int pop = stack.pop();
-                if(((pop=='(')!=(infix[i]==')'))||((pop=='{')!=(infix[i]=='}'))||((pop=='[')!=(infix[i]==']'))){
-                    t=1;
+                if (((pop == '(') != (infix[i] == ')')) || ((pop == '{') != (infix[i] == '}')) || ((pop == '[') != (infix[i] == ']'))) {
+                    t = 1;
                     break;
                 }
             }
             i++;
         }
-        if(!stack.isEmpty()|| t==1){
+        if (!stack.isEmpty() || t == 1) {
             System.out.println("Invalid or Imbalanced Expression ");
-        }else{
+        } else {
             System.out.println("valid or Balanced Expression ");
         }
     }
