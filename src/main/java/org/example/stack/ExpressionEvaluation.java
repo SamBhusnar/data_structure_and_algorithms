@@ -3,6 +3,7 @@ package org.example.stack;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Scanner;
+
 @Slf4j
 public class ExpressionEvaluation {
 
@@ -62,10 +63,10 @@ public class ExpressionEvaluation {
         i = 0;
         while (postfix[i] != '\0') {
             if (postfix[i] != '+' && postfix[i] != '-' && postfix[i] != '*' && postfix[i] != '/') {
-                ee.push(((int)postfix[i]-48 ));
-            } else  {
+                ee.push(((int) postfix[i] - 48));
+            } else {
                 System.out.println("----------------from stack start------------------");
-                for (int j = 0; j<=  ee.top; j++) {
+                for (int j = 0; j <= ee.top; j++) {
                     System.out.println(ee.items[j]);
                 }
                 System.out.println("----------------from stack end------------------");
@@ -73,7 +74,7 @@ public class ExpressionEvaluation {
                 int b = ee.pop();
                 int a = ee.pop();
                 char operator = (char) postfix[i];
-                System.out.println(a+""+operator+""+b);
+                System.out.println(a + "" + operator + "" + b);
                 int res = 0;
                 if (operator == '+') {
                     res = a + b;
@@ -84,12 +85,12 @@ public class ExpressionEvaluation {
                 } else if (operator == '/') {
                     res = a / b;
                 }
-                ee.push( res);
+                ee.push(res);
             }
             i++;
         }
-        int finalRes=ee.pop();
-        System.out.println("reslt : "+finalRes);
+        int finalRes = ee.pop();
+        System.out.println("reslt : " + finalRes);
     }
 
 
