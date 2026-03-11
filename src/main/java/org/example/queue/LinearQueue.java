@@ -13,44 +13,51 @@ public class LinearQueue {
 
     public boolean isFull() {
         if (rear == max - 1) {
+
             return true;
         }
+
         return false;
     }
 
     public boolean isEmpty() {
         if (rear == front) {
+
             return true;
         }
+
         return false;
     }
 
     public void insert(int element) {
         if (isFull()) {
             System.out.println("Queue is overflows");
+            status();
         } else {
             this.items[++rear] = element;
+            status();
         }
     }
 
     public int remove() {
         if (isEmpty()) {
             System.out.println("Queue is underflow");
+            status();
             return -1;
         } else {
             return this.items[++front];
         }
     }
 
-    public int[] status(){
-        for (int i = this.front+1; i <this.rear ; i++) {
-            System.out.print("[");
-            if(){
-
-            }
+    public void status(){
+        System.out.print("[");
+        for (int i = this.front+1; i <=this.rear ; i++) {
             System.out.print(items[i]);
-            System.out.print("]");
+            if(i%max<max-1){
+                System.out.print(",");
+            }
         }
+        System.out.print("]");
     }
 
     public static void main() {
@@ -59,7 +66,7 @@ public class LinearQueue {
         int inp = 0;
         while (true) {
 
-            System.out.println("\nPress 1 for to insert\npress 2 for remove\npress 3 for to check queue is full\n press 4 for to check queue is empty \n press 5 for exit\n");
+            System.out.println("\nPress 1 for to insert\npress 2 for remove\npress 3 for to check queue is full\n press 4 for to check queue is empty \npress 5 for status\n press 6 for exit\n");
             inp = sc.nextInt();
             switch (inp) {
                 case 1:
@@ -88,6 +95,9 @@ public class LinearQueue {
                     }
                     break;
                 case 5:
+                    queue.status();
+                    break;
+                case 6:
                     System.exit(0);
                 default:
                     System.out.println("\ninvalid input , Please insert appropriate input");
