@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.queue.CircularQueue;
 import org.example.queue.LinearQueue;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -20,8 +21,11 @@ public class Main {
 //        SubroutineCall.main();// subroutine call
 //        -----------------------------------------------------------
         // -------------------------queue---------------------------------
-        LinearQueue.main();// linear queue implementation
+//        LinearQueue.main();// linear queue implementation
 //        -----------------------------------------------------------------
+        // -------------------------circular queue---------------------------------
+        CircularQueue.main();
+        // -----------------------------------------------------------------
         System.out.println("Main method executed!");
     }
 }

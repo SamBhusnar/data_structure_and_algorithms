@@ -40,7 +40,7 @@ public class CircularQueue {
             return -1;
         }else{
             int removed=items[front];
-            if(front+1==rear){
+            if(front==rear){
                 front=rear=-1;
             }else {
                 front = (front + 1) % max;
@@ -56,7 +56,10 @@ public class CircularQueue {
                 System.out.print(",");
 //            }
         }
-        System.out.print(items[rear]+"]");
+        if(rear!=-1) {
+            System.out.print(items[rear] );
+        }
+        System.out.print("]");
     }
     public static void main() {
       Scanner sc=new Scanner(System.in);
@@ -78,17 +81,25 @@ public class CircularQueue {
                   }
                   break;
               case 3:
-                  queue.isEmpty();
+                  if(queue.isEmpty()){
+                      System.out.println("\nQueue is empty!");
+                  }else {
+                      System.out.println("\nQueue is not empty!");
+                  }
                   break;
               case 4:
-                  queue.isFull();
+                  if(queue.isFull()){
+                      System.out.println("\nQueue is full!");
+                  }else{
+                      System.out.println("\nQueue is not full!");
+                  }
                   break;
               case 5:
                   queue.display();
                   break;
               case 6:
                   System.exit(0);
-                  break;
+
               default:
                   System.out.println("Invalid input ! please insert appropriate input");
           }
