@@ -13,7 +13,7 @@ public class PriorityQueue {
     }
     // only three operations that is insert,remove and display
     public void insert(int element,int priority){
-        if(front==rear){
+        if(rear==max-1){
             System.out.println("Priority queue is overflow");
         }else{
             rear++;
@@ -29,23 +29,25 @@ public class PriorityQueue {
             return  -1;
         }else{
             m=priorities[front+1];
+            int z=-1;
             for (int i = front+1; i <=rear ; i++) {
                 if(m<priorities[i]){
                     m=priorities[i];
                     pos=i;
                 }
             }
+            z=items[pos];
             for (int i = pos; i < rear; i++) {
                 items[i]=items[i+1];
                 priorities[i]=priorities[i+1];
             }
             rear--;
-            return m;
+            return z;
         }
     }
     public  void display(){
         System.out.print("priority: [");
-        for (int i = front+1; i <rear ; i++) {
+        for (int i = front+1; i <=rear ; i++) {
             System.out.print(priorities[i]+" ");
 
         }

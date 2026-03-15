@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.queue.CircularQueue;
-import org.example.queue.Dequeue_ord;
-import org.example.queue.Dqueue_ird;
-import org.example.queue.LinearQueue;
+import org.example.queue.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -32,7 +29,10 @@ public class Main {
 //        Dqueue_ird.main();
         // -----------------------------------------------------------------
         // -------------------------dequeue---------------------------------
-        Dequeue_ord.main();
+//        Dequeue_ord.main();
+        // -----------------------------------------------------------------
+        // -------------------------priority queue---------------------------------
+        PriorityQueue.main();
         // -----------------------------------------------------------------
         System.out.println("Main method executed!");
     }
