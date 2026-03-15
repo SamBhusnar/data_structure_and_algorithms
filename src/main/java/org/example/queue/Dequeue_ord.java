@@ -1,7 +1,7 @@
 package org.example.queue;
 
 import java.util.Scanner;
-
+// Dequeue using linear queue
 public class Dequeue_ord {
     int []items;
     int left,right;
